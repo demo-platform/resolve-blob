@@ -30,7 +30,7 @@ http.createServer(function(req, res){
     res.writeHead(200, {
       "Content-Type": "image/png"
     });
-    if(fs.exsitsSync(filePath)){
+    if(fs.existsSync(filePath)){
       res.write(fs.readFileSync(filePath));
     } else {
       res.write("<h1><a href='http://barretlee.com/'>小胡子哥</a>告诉你：404了~</h1>");

@@ -11,12 +11,13 @@ http.createServer(function(req, res){
 
     form.parse(req, function(error, fields, files) {
       res.writeHead(200, {
-        "Content-Type": "text/javascript"
+        "access-control-allow-origin": "*",
+        "Content-Type": "text/json"
       });
-      res.write("callback(" + JSON.stringify({
+      res.write(JSON.stringify({
         code: 200,
         path: files.img && files.img.path && files.img.path.split("/").pop()
-      }) + ")");
+      }));
       res.end();
       setTimeout(function(){
         // 十分钟后删除文件

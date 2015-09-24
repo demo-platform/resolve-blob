@@ -19,6 +19,7 @@ http.createServer(function(req, res){
         path: files.img && files.img.path && files.img.path.split("/").pop()
       }));
       res.end();
+
       setTimeout(function(){
         // 十分钟后删除文件
         fs.unlinkSync(files.img.path);

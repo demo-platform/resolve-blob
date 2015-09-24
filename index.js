@@ -2,7 +2,7 @@ var fs = require('fs');
 var http = require('http');
 var formidable = require('./f/index');
 var path = require('path');
-var PORT = process.env.port || 3300;
+var PORT = process.env.VCAP_APP_PORT || 3300;
 
 http.createServer(function(req, res){
   if(req.url == '/img') {

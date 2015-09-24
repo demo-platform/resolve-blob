@@ -9,6 +9,10 @@ http.createServer(function(req, res){
     var form = new formidable.IncomingForm();
     form.uploadDir = path.join(__dirname, "./tmp/");
 
+    if(!fs.existsSync(form.uploadDir)) {
+      fs.mkdir(form.uploadDir);
+    }
+
     form.parse(req, function(error, fields, files) {
       res.writeHead(200, {
         "access-control-allow-origin": "*",

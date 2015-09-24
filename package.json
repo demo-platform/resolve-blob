@@ -1,0 +1,11 @@
+{
+  "name": "node-hello",
+  "version": "0.0.1",
+  "description": "nodejs demo",
+  "scripts": {
+    "start": "node index.js",
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

@@ -12,12 +12,14 @@ http.createServer(function(req, res){
     form.parse(req, function(error, fields, files) {
       res.writeHead(200, {
         "access-control-allow-origin": "*",
+        "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
         "Content-Type": "text/javascript"
       });
-      res.write("cb("+JSON.stringify({
+      res.write(JSON.stringify({
         code: 200,
         path: files.img && files.img.path && files.img.path.split("/").pop()
-      })+")");
+      }));
       res.end();
 
       setTimeout(function(){

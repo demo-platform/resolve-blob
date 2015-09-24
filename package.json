@@ -1,7 +1,0 @@
-{
-  "name": "demo",
-  "author": "barretlee",
-  "dependencies": {
-    "formidable": "~1.0.17",
-  }
-}

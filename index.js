@@ -1,6 +1,6 @@
 var fs = require('fs');
 var http = require('http');
-var formidable = require('formidable');
+var formidable = require('./f/index');
 var path = require('path');
 var PORT = process.env.port || 3300;
 

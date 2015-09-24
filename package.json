@@ -1,10 +1,7 @@
 {
-  "name": "node-hello",
+  "name": "tmpfile",
   "version": "0.0.1",
-  "description": "nodejs demo",
-  "scripts": {
-    "start": "node index.js",
-  },
+  "description": "tmpfile",
   "engines": {
     "node": ">=0.10"
   }

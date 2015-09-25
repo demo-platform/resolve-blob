@@ -8,10 +8,10 @@
 
 ```
 POST /img
-callback({
+{
   code: 200,
   path: filepath
-})
+}
 ```
 
 下载文件

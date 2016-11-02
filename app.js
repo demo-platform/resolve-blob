@@ -39,11 +39,13 @@ http.createServer(function(req, res){
     if(fs.existsSync(filePath)){
       res.write(fs.readFileSync(filePath));
     } else {
-      res.write("<h1><a href='http://barretlee.com/'>小胡子哥</a>告诉你：404了~</h1>");
+      res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
+      res.write("<h1><a href='http://barretlee.com/'>小胡子哥</a>告诉你：404了~</h1>", 'utf-8');
     }
     res.end();
   } else {
-    res.write("<h1><a href='http://barretlee.com/'>小胡子哥</a>告诉你：404了~</h1>");
+    res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
+    res.write("<h1><a href='http://barretlee.com/'>小胡子哥</a>告诉你：404了~</h1>", 'utf-8');
     res.end();
   }
 }).listen(PORT, function(){
